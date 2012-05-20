@@ -1,0 +1,25 @@
+<h1>Listing test10s</h1>
+
+<table>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @test10s.each do |test10| %>
+  <tr>
+    <td><%= test10.no %></td>
+    <td><%= test10.name %></td>
+    <td><%= link_to 'Show', test10 %></td>
+    <td><%= link_to 'Edit', edit_test10_path(test10) %></td>
+    <td><%= link_to 'Destroy', test10, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Test10', new_test10_path %>
